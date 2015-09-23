@@ -1,0 +1,22 @@
+{
+  "name": "tablero-udea",
+  "version": "0.1.5",
+  "description": "Notas de tablero, desarrollado por James Garzon, y David Alvarez",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "socket.io": "0.9.x"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "UdeA"
+}
