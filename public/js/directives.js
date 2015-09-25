@@ -10,25 +10,11 @@ app.directive('stickyNote', function(socket) {
 					});
 				}
 			});
-			 // for (var i = scope.notes.length - 1; i >= 0; i--) {
-				// 		if (scope.notes[i].id == scope.note.id ) {
-				// 			element.animate({
-				// 	 			left: scope.notes[i].x,
-				// 	 			top: scope.notes[i].y
-				// 	 		});
-				// 		};
-			 			
-			 // 		};
+
 							element.animate({
 				 	 			left: scope.note.x,
 					 			top: scope.note.y
 				 	 		});
-
-				
-				// Update if the same note
-	
-				
-
 
 			socket.on('onNoteMoved', function(data) {
 				// Update if the same note
@@ -41,10 +27,7 @@ app.directive('stickyNote', function(socket) {
 				}
 			});
 
-
-
-
-			// Some DOM initiation to make it nice
+			// Some DOM initiation
 			element.css('left', '10px');
 			element.css('top', '50px');
 			element.hide().fadeIn();
@@ -70,7 +53,6 @@ app.directive('stickyNote', function(socket) {
 					id: id
 				});
 			};
-
 
 		};
 

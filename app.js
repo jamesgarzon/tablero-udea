@@ -7,9 +7,7 @@ app.configure(function() {
     app.use(express.static(__dirname + '/public'));
 });
 
-var notes = [
-
-];
+var notes = [];
 
 io.sockets.on('connection', function(socket) {
 
@@ -51,14 +49,6 @@ io.sockets.on('connection', function(socket) {
     	
 
 		socket.broadcast.emit('onNoteDeleted', data);
-	});
-
-	//socket.on('alerta', function(data) {
-//		socket.broadcast.emit('onAlerta', data);
-//	});
-
-	socket.on('listar', function(data) {
-		socket.broadcast.emit('onNewConnection', notes);
 	});
 
 });

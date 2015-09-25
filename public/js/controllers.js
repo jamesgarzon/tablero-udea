@@ -30,19 +30,6 @@ app.controller('MainCtrl', function($scope, socket) {
 		socket.emit('createNote', note);
 	};
 
-/*	 $scope.alerta = function () {
-	 	
-	 	var note = {
-			id: new Date().getTime(),
-			title: 'New Note',
-			body: 'Pending'
-		};
-
-	 	socket.emit('alerta',note);
-	 	console.log("entre al alert");
-	 }*/
-
-
 	$scope.deleteNote = function(id) {
 		$scope.handleDeletedNoted(id);
 
